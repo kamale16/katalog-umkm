@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lapak Nusantara · Katalog Produk UMKM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-page font-sans text-ink antialiased">
+
+<header class="stick bg-brand text-on-brand">
+  <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+    <a href="#top" data-go="top" class="text-xl font-extrabold tracking-tight">Lapak <b class="text-gold">Nusantara</b></a>
+    <div class="hidden gap-6 text-sm font-medium md:flex">
+      <a href="#kategori" data-go="kategori" class="hover:text-gold">Kategori</a>
+      <a href="#produk" data-go="produk" class="hover:text-gold">Produk</a>
+      <a href="#galeri" data-go="galeri" class="hover:text-gold">Galeri</a>
+      <a href="#tentang" data-go="tentang" class="hover:text-gold">Tentang</a>
+      <a href="#kontak" data-go="kontak" class="hover:text-gold">Kontak</a>
+    </div>
+    <button id="theme" type="button" class="rounded-lg border border-white/40 px-3 py-1 text-sm hover:bg-white/10">Ganti tema</button>
+  </nav>
+</header>
+
+<section id="top" class="bg-brand pb-16 text-on-brand">
+  <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 pt-8 md:grid-cols-2">
+    <div>
+      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-gold">Katalog UMKM Indonesia</p>
+      <h1 class="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">Bangga pakai produk lokal.</h1>
+      <p class="mt-4 max-w-md text-lg opacity-90">Temukan makanan, minuman, dan kerajinan buatan UMKM. Pilih produknya, pesan langsung lewat WhatsApp.</p>
+      <a href="#produk" data-go="produk" class="mt-7 inline-block rounded-full bg-gold px-7 py-3 font-semibold text-on-gold hover:brightness-105">Explore</a>
+    </div>
+    <div id="heroPics" class="grid grid-cols-3 items-end gap-3" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section id="kategori" class="mx-auto max-w-6xl px-4 py-14">
+  <h2 class="text-3xl font-extrabold tracking-tight">Belanja per kategori</h2>
+  <p class="mt-1 mb-6 text-mute">Pilih kategori favoritmu.</p>
+  <div id="cats" class="grid gap-4 sm:grid-cols-3"></div>
+</section>
+
+<main id="produk" class="mx-auto max-w-6xl px-4">
+  <h2 class="text-3xl font-extrabold tracking-tight">Semua produk</h2>
+  <div class="mt-5 grid gap-3 rounded-2xl border border-line bg-card p-4 shadow-lg md:grid-cols-[1fr_200px]">
+    <input id="q" type="search" placeholder="Cari produk, misalnya kopi atau batik" aria-label="Cari produk"
+           class="w-full rounded-xl border border-line bg-field px-4 py-3 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold">
+    <select id="s" aria-label="Urutkan"
+            class="w-full rounded-xl border border-line bg-field px-4 py-3 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold">
+      <option value="def">Urutan awal</option>
+      <option value="lo">Harga terendah</option>
+      <option value="hi">Harga tertinggi</option>
+    </select>
+    <div id="chips" class="flex flex-wrap gap-2 md:col-span-2" role="group" aria-label="Kategori"></div>
+  </div>
+  <p id="count" class="mt-6 mb-3 text-mute"></p>
+  <div id="grid" class="grid grid-cols-1 gap-4 pb-14 sm:grid-cols-2 lg:grid-cols-4"></div>
+</main>
+
+<section id="galeri" class="mx-auto max-w-6xl px-4 pb-14">
+  <h2 class="text-3xl font-extrabold tracking-tight">Galeri UMKM</h2>
+  <p class="mt-1 mb-6 text-mute">Sekilas karya para pelaku usaha.</p>
+  <div id="gal" class="grid auto-rows-[110px] grid-cols-2 gap-3 md:grid-cols-4 md:auto-rows-[130px]"></div>
+</section>
+
+<section class="border-y border-line bg-card">
+  <div class="mx-auto grid max-w-6xl gap-6 px-4 py-10 text-center sm:grid-cols-3">
+    <div><div class="text-5xl font-extrabold text-brand">120+</div><div class="text-mute">Produk UMKM</div></div>
+    <div><div class="text-5xl font-extrabold text-brand">45</div><div class="text-mute">UMKM binaan</div></div>
+    <div><div class="text-5xl font-extrabold text-brand">12</div><div class="text-mute">Kota terjangkau</div></div>
+  </div>
+</section>
+
+<section id="tentang" class="mx-auto grid max-w-6xl gap-8 px-4 py-14 md:grid-cols-[1fr_2fr]">
+  <h2 class="text-3xl font-extrabold tracking-tight">Tentang Lapak Nusantara</h2>
+  <div class="space-y-4 text-lg text-mute">
+    <p>Lapak Nusantara adalah katalog digital yang mempertemukan pembeli dengan pelaku UMKM lokal. Setiap produk dipilih langsung dari pengrajin dan produsen kecil di berbagai daerah.</p>
+    <p>Tanpa keranjang belanja yang rumit: pilih produk, tekan tombol pesan, dan percakapan dengan penjual langsung terbuka di WhatsApp.</p>
+    <p class="text-sm">Catatan: ini halaman demo projek portofolio. Angka statistik dan data produk hanyalah contoh.</p>
+  </div>
+</section>
+
+<footer id="kontak" class="bg-brand text-on-brand">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 sm:flex-row sm:items-center sm:justify-between">
+    <div><div class="text-xl font-extrabold">Lapak <span class="text-gold">Nusantara</span></div><div class="opacity-80">Hubungi kami: 0812-3456-7890</div></div>
+    <a id="foot" target="_blank" rel="noopener noreferrer" class="rounded-full bg-wa px-6 py-3 text-center font-semibold text-white hover:brightness-110">Chat via WhatsApp</a>
+  </div>
+</footer>
+
+<a id="fab" target="_blank" rel="noopener noreferrer" class="fixed right-4 rounded-full bg-wa px-5 py-3 font-semibold text-white shadow-xl hover:brightness-110" style="bottom:calc(16px + env(safe-area-inset-bottom,0px))">Chat toko</a>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

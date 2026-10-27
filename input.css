@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Warna tema dan pengaturan dasar */
+:root{--bg:#f4f7f6;--card:#fff;--ink:#12302a;--mute:#56706a;--line:#dbe5e2;--brand:#0f5c4d;--on-brand:#fff;--gold:#f2b705;--on-gold:#2a2000;--wa:#1f9d55;--field:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1a17;--card:#13251f;--ink:#e6f1ee;--mute:#92aba4;--line:#244039;--brand:#0f5c4d;--on-brand:#e6f1ee;--wa:#34c46f;--field:#0f201b}}
+:root[data-theme="dark"]{--bg:#0c1a17;--card:#13251f;--ink:#e6f1ee;--mute:#92aba4;--line:#244039;--brand:#0f5c4d;--on-brand:#e6f1ee;--wa:#34c46f;--field:#0f201b}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{background:var(--bg)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--brand)}
+.stick{position:sticky;top:env(safe-area-inset-top,0px);z-index:30}

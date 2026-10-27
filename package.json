@@ -1,0 +1,10 @@
+{
+  "name": "katalog-umkm",
+  "version": "1.0.0",
+  "description": "Katalog produk UMKM dengan Tailwind CSS dan JavaScript",
+  "scripts": {
+    "build": "tailwindcss -i ./css/input.css -o ./css/style.css --minify",
+    "dev": "tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+  },
+  "devDependencies": { "tailwindcss": "3.4.17" }
+}
